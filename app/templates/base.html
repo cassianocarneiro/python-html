@@ -1,0 +1,19 @@
+<!-- Comentario em HTML -->
+
+<!-- header: informações sobre a página (autor, título, o que que tem que carregar, etc.) -->
+<!-- body: corpo da página -->
+
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - Microblog</title>
+      {% else %}
+      <title>Welcome to Microblog</title>
+      {% endif %}
+    </head>
+    <body>
+        <div>Microblog: <a href="/index">Home</a></div>
+        <hr>
+        {% block content %}{% endblock %} <!-- Adiciona um bloco definido em outro arquivo HTML (em index.html, por exemplo) -->
+    </body>
+</html>
